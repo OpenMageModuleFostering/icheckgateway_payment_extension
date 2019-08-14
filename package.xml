@@ -1,18 +1,94 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <package>
-    <name>iCheckgateway_Payment_Extension</name>
-    <version>1.0.0</version>
-    <stability>stable</stability>
-    <license>Open Software License (OSL)</license>
-    <channel>community</channel>
-    <extends/>
-    <summary>Extension provides the payment gateway processing on credit cards and checks, to b used in the magento CE</summary>
-    <description>The extension provides the secure gateway to payment by iCheckgatway Payment gateway by means of cards and check payments.</description>
-    <notes>After installing the extension, Please do not forget to refresh magento cache. After refreshing caches, there will be new options in the admin &gt; configuration &gt; Payment Methods. Expand their blocks to enable them and save.</notes>
-    <authors><author><name>LuminousTec LLC</name><user>baljindernimble</user><email>baljinder@nimbe-solution.com</email></author></authors>
-    <date>2015-01-06</date>
-    <time>16:11:29</time>
-    <contents><target name="magecore"><dir name="."><dir name="app"><dir name="code"><dir name="core"><dir name="Mage"><dir name="Payment"><dir name="Block"><dir name="Form"><file name="CheckACH.php" hash=""/></dir><dir name="Info"><file name="CheckACH.php" hash=""/></dir></dir></dir></dir></dir></dir></dir></dir></target><target name="magelocal"><dir name="."><dir name="app"><dir name="code"><dir name="core"><dir name="Mage"><dir name="Payment"><dir name="Model"><dir name="Method"><file name="CheckACH.php" hash=""/></dir></dir></dir></dir></dir><dir name="local"><dir name="ICheckGateway"><dir name="Checks"><dir name="etc"><file name="config.xml" hash=""/><file name="system.xml" hash=""/></dir><dir name="Model"><file name="PaymentMethod.php" hash=""/></dir></dir><dir name="CreditCards"><dir name="etc"><file name="config.xml" hash=""/><file name="system.xml" hash=""/></dir><dir name="Model"><file name="PaymentMethod.php" hash=""/></dir></dir></dir></dir></dir></dir></dir></target><target name="magedesign"><dir name="."><dir name="app"><dir name="design"><dir name="frontend"><dir name="base"><dir name="default"><dir name="template"><dir name="payment"><dir name="form"><file name="checkach.phtml" hash=""/></dir></dir></dir></dir></dir></dir></dir></dir></dir></target><target name="mageetc"><dir name="."><dir name="app"><dir name="etc"><dir name="modules"><file name="ICheckGateway_Checks.xml" hash=""/><file name="ICheckGateway_CreditCards.xml" hash=""/></dir></dir></dir></dir></target></contents>
-    <compatible/>
-    <dependencies><required><php><min>5.1.0</min><max>6.0.0</max></php></required></dependencies>
+   <name>iCheckgateway_Payment_Extension</name>
+   <version>1.0.1</version>
+   <stability>stable</stability>
+   <license>Open Software License (OSL)</license>
+   <channel>community</channel>
+   <extends />
+   <summary>Extension provides the payment gateway processing on credit cards and checks, to b used in the magento CE</summary>
+   <description>The extension provides the secure gateway to payment by iCheckgatway Payment gateway by means of cards and check payments.</description>
+   <notes>After installing the extension, Please do not forget to refresh magento cache. After refreshing caches, there will be new options in the admin &gt; configuration &gt; Payment Methods. Expand their blocks to enable them and save.</notes>
+   <authors>
+      <author>
+         <name>LuminousTec LLC</name>
+         <user>baljindernimble</user>
+         <email>baljinder@nimble-solution.com</email>
+      </author>
+   </authors>
+   <date>2015-01-06</date>
+   <time>20:59:01</time>
+   <contents>
+      <target name="magecore">
+         <dir name="Mage">
+            <dir name="Payment">
+               <dir name="Block">
+                  <dir name="Form">
+                     <file name="CheckACH.php" hash="3bbaf272861b28fc473f6a6450f401b2" />
+                  </dir>
+                  <dir name="Info">
+                     <file name="CheckACH.php" hash="9f536dba33f62d1b991be033ca3b7c70" />
+				  </dir>
+               </dir>
+               <dir name="Model">
+                  <dir name="Method">
+                     <file name="CheckACH.php" hash="aafdd80b3a6eeb831d78241fc80b6030" />
+                  </dir>
+               </dir>
+            </dir>
+         </dir>
+      </target>
+      <target name="magelocal">
+         <dir name="ICheckGateway">
+            <dir name="Checks">
+               <dir name="etc">
+                  <file name="config.xml" hash="932d7bbb7f7ae43ad0150f640e05fed1" />
+                  <file name="system.xml" hash="5157f01203341def26e7fe2728a72a64" />
+               </dir>
+               <dir name="Model">
+                  <file name="PaymentMethod.php" hash="6c756c11a43a1467b659c5f2120534c6" />
+               </dir>
+            </dir>
+            <dir name="CreditCards">
+               <dir name="etc">
+                  <file name="config.xml" hash="4bab553030635ac310b4cca421771b94" />
+                  <file name="system.xml" hash="87ce35439e50d73dce394bee6b521f15" />
+               </dir>
+               <dir name="Model">
+                  <file name="PaymentMethod.php" hash="a229e96cb2a595fc9882511b60e89c33" />
+               </dir>
+            </dir>
+         </dir>
+      </target>
+      <target name="magedesign">
+         <dir name="frontend">
+            <dir name="base">
+               <dir name="default">
+                  <dir name="template">
+                     <dir name="payment">
+                        <dir name="form">
+                           <file name="checkach.phtml" hash="74cabe6d16bb70040d9052e9f36f1d5c" />
+                        </dir>
+                     </dir>
+                  </dir>
+               </dir>
+            </dir>
+         </dir>
+      </target>
+      <target name="mageetc">
+         <dir name="modules">
+            <file name="ICheckGateway_Checks.xml" hash="5a341f24ccebfbb89753d6abdbb6c42a" />
+            <file name="ICheckGateway_CreditCards.xml" hash="385380cfaf7e6bb83f0971e3ae5c95c0" />
+         </dir>
+      </target>
+   </contents>
+   <compatible />
+   <dependencies>
+      <required>
+         <php>
+            <min>5.1.0</min>
+            <max>6.0.0</max>
+         </php>
+      </required>
+   </dependencies>
 </package>

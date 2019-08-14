@@ -1,0 +1,26 @@
+<?php $_code=$this->getMethodCode() ?>
+<ul class="form-list" id="payment_form_<?php echo $_code ?>" style="display:none;">
+    <li>
+        <label for="<?php echo $_code ?>_routingnum" class="required"><em>*</em><?php echo $this->__('Routing Number') ?></label>
+        <div class="input-box">
+            <input type="text" title="<?php echo $this->__('Routing Number') ?>" class="input-text required-entry" id="<?php echo $_code ?>_routingnum" name="payment[routingnum]" maxlength="9" />
+        </div>
+    </li>
+	<li>
+        <label for="<?php echo $_code ?>_accountnum" class="required"><em>*</em><?php echo $this->__('Account Number') ?></label>
+        <div class="input-box">
+            <input type="text" title="<?php echo $this->__('Account Number') ?>" class="input-text required-entry" id="<?php echo $_code ?>_accountnum" name="payment[accountnum]" maxlength="17" />
+        </div>
+    </li>
+    <li>
+        <label for="<?php echo $_code ?>_accounttype" class="required"><em>*</em><?php echo $this->__('Bank Account Type') ?></label>
+        <div class="input-box">
+            <select id="<?php echo $_code ?>_accounttype" name="payment[accounttype]" title="<?php echo $this->__('Bank Account Type') ?>" class="required-entry">
+                <option value="PC" selected="selected">Personal Checking</option>
+				<option value="PS">Personal Savings</option>
+				<option value="BC">Business Checking</option>
+				<option value="BS">Business Savings</option>
+            </select>
+        </div>
+    </li>
+</ul>

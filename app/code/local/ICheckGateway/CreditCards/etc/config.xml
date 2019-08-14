@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+       <ICheckGateway_CreditCards>
+          <version>1.1.0</version>
+       </ICheckGateway_CreditCards>
+    </modules>
+ 
+    <global>
+    <blocks>
+        <CreditCards>
+            <class>ICheckGateway_CreditCards_Block</class>
+        </CreditCards>
+    </blocks>
+ 
+        <models>
+            <CreditCards>
+                <class>ICheckGateway_CreditCards_Model</class>
+            </CreditCards>
+        </models>
+ 
+        <resources>
+            <CreditCards_setup>
+                <setup>
+                    <module>ICheckGateway_CreditCards</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </CreditCards_setup>
+            <CreditCards_write>
+                <connection>
+                  <use>core_write</use>
+                </connection>
+            </CreditCards_write>
+            <CreditCards_read>
+               <connection>
+                <use>core_read</use>
+              </connection>
+            </CreditCards_read>
+        </resources>
+    </global>
+ 
+    <default>
+        <payment>
+            <CreditCards>
+                <active>0</active>
+                <model>CreditCards/PaymentMethod</model>
+                <order_status>processing</order_status>
+                <title>Pay With Credit Card</title>
+				<siteid>SEDZ</siteid>
+				<sitekey>236652</sitekey>
+				<apikey>a3GFMBGz6KhkTzg</apikey>
+				<livemode>No</livemode>
+                <cctypes>AE,VI,MC,DI</cctypes>
+                <payment_action>authorize</payment_action>
+                <allowspecific>0</allowspecific>
+            </CreditCards>
+         </payment>
+    </default>
+</config>

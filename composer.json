@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/iCheckgateway_Payment_Extension",
+    "name": "OpenMageModuleFostering\/iCheckgateway_Payment_Extension",
     "type": "magento-module",
     "license": "Open-Software-License-(OSL)",
     "homepage": "",
     "description": "Extension provides the payment gateway processing on credit cards and checks, to b used in the magento CE",
     "authors": [
-    {
-        "name": "LuminousTec LLC",
-        "email": "baljinder@nimble-solution.com"
-    }
-],
+        {
+            "name": "LuminousTec LLC",
+            "email": "baljinder@nimble-solution.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
